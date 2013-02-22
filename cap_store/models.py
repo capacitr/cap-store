@@ -240,7 +240,7 @@ class Recipe(models.Model):
     ingredients = models.TextField(blank=True)
     directions = models.TextField(blank=True)
 
-    category = models.ForeignKey('store.Category', null=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('cap_store.Category', null=True, on_delete=models.SET_NULL)
 
     publish = models.BooleanField(default=False)
 
