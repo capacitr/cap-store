@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 
 from django.conf import settings
 
-from store.models import Product, Category, Recipe
+from cap_store.models import Product, Category, Recipe
 
 def paginate_product(req, page_number=None):
     p = Paginator(models.Product.objects.filter(site__pk__exact = settings.SITE_ID, publish=True), 5)
