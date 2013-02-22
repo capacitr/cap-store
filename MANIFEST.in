@@ -1,1 +1,2 @@
 recursive-include cap_store *
+recursive-include cap_store/templatetags *
