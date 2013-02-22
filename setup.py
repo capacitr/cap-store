@@ -8,6 +8,7 @@ setup(
     packages=['cap_store'],
     include_package_data=True,
     url='http://capacitr.com/',
+    nclude_package_data=True,
     description='A simple django-based store.',
 )
 
