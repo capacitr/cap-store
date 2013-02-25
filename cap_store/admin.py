@@ -11,7 +11,7 @@ class CouponAdmin(admin.ModelAdmin):
 
 class RecipeAdmin(admin.ModelAdmin):
     list_display = ['name', 'description', 'image', 'category', 'publish']
-    list_editable = ['publish']
+    list_editable = ['category', 'publish']
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'image', 'category_one', 'category_two']
