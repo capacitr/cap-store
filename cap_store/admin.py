@@ -13,6 +13,10 @@ class RecipeAdmin(admin.ModelAdmin):
     list_display = ['name', 'description', 'image', 'category', 'publish']
     list_editable = ['publish']
 
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['name', 'image', 'category_one', 'category_two']
+
 admin.site.register(models.Recipe, RecipeAdmin)
 admin.site.register(models.Category, CategoryAdmin)
-admin.site.register(models.Product)
+admin.site.register(models.Product, ProductAdmin)
+
