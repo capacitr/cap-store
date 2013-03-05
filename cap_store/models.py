@@ -34,7 +34,7 @@ class Category(models.Model):
 
 class Product(models.Model):
 
-    brand = models.CharField(max_length=255)
+    brand = models.CharField(max_length=255, blank=True)
 
     name = models.CharField(max_length=255)
 
