@@ -30,7 +30,9 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'categories'
-    
+
+class Order(models.Model):
+    pass
 
 class Product(models.Model):
     brand = models.CharField(max_length=255, blank=True)
