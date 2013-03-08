@@ -6,6 +6,8 @@ Replace this with more appropriate tests for your application.
 """
 from django.test.client import Client
 from django.test import TestCase
+from models import Recipe
+from models import Product
 
 
 class SimpleTest(TestCase):
@@ -20,5 +22,26 @@ class AdminTest(TestCase):
         pass
 
 class ViewTest(TestCase):
+    def setUp(self):
+        self.client = Client()
+
     def test_recipe_view(self):
-        client = Client()
+        recipe = Recipe()
+        recipe.name = "test"
+        recipe.description = "test"
+        recipe.publish=True
+        recipe.save()
+        self.client.get(recipe.get_absolute_url())
+
+    def test_product_view(self):
+        product = Product()
+        product.name = "test"
+        product.slug = "test"
+        product.description = "test"
+        product.publish = True
+        product.save()
+
+        self.client.get(product.get_absolute_url())
+
+class TemplateTagTest(TestCase):
+    pass

@@ -72,7 +72,7 @@ class Product(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('get_product', None, {'slug' : self.slug} )
+        return ('get_product', (), {'product_slug' : self.slug} )
 
 class Coupon(models.Model):
     image = EnhancedImageField(
@@ -107,7 +107,7 @@ class Recipe(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('recipe', (), {
+        return ('get_recipe', (), {
             'recipe_id' : self.pk 
         })
 
