@@ -74,6 +74,9 @@ class Product(models.Model):
     def get_absolute_url(self):
         return ('get_product', (), {'product_slug' : self.slug} )
 
+class Attribute(models.Model):
+    pass
+
 class Coupon(models.Model):
     image = EnhancedImageField(
         upload_to = 'uploads',
